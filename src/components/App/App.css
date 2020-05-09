@@ -26,3 +26,11 @@ body{
   /* background: rgb(34,193,195);
   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
 }
+
+#start{
+  padding: 30px;
+  margin: 70px;
+  font-size: 30px;
+  color: rgba(253,187,45,1);
+  background-color: rgb(18, 10, 92);
+}

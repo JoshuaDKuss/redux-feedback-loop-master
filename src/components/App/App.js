@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 //import axios from 'axios';
 import Header from '../Header/Header';
+import BodyStart from '../BodyStart/BodyStart';
+
 //import Footer from '../Footer/Footer';
 //import Body from '../Body/Body';
 //import { connect } from 'react-redux';
@@ -12,18 +14,28 @@ import Header from '../Header/Header';
 class App extends Component {
 
   componentDidMount() {
-    console.log('in componentDidMount');
+    console.log('in componentDidMount', this.props);
   }
+
+  handleClick = () => {
+    console.log('HC app');
+    //this.props.dispatch({ type: click });
+    //this.props.history.push( '/Question1' );
+  } // end HC
 
   render() {
     return (
-      <div className="App">
+      <div className="App">    
         {/* <HashRouter> */}
 
           <Header />
+          <BodyStart />
+
+
           
+
           {/* <ul>
-            <li><Link to="/">Add Pizzas</Link></li>
+            
             <li><Link to="/order">Order Info</Link></li>
             <li><Link to="/checkout">Checkout</Link></li>
           </ul>
@@ -49,6 +61,12 @@ class App extends Component {
 //const reduxStateToProps = (reduxState) => ({ reduxState });
 
 //export default connect(reduxStateToProps)(App);
+
+
+
+// onClick={ this.handleClick }
+// {/* <link to="/Question1"></link> */}
+
 
 export default App;
 

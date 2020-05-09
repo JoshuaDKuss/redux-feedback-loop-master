@@ -19,7 +19,7 @@ class Header extends Component{
           <br></br>Feedback!   
           
           </h1>
-          <h4><i>Don't forget it, y'all!</i></h4>
+          {/* <h4><i>Don't forget it, y'all!</i></h4> */}
           </header>
         
       </div>
