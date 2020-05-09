@@ -12,7 +12,7 @@ class Question1 extends Component {
   } // end CDM
 
   handleChange1 = (event) => {
-    console.log('feeling', event.target.value)
+    console.log('feelz', event.target.value)
     this.setState({ feelz: event.target.value })
   } // end HC1
 
@@ -32,9 +32,9 @@ class Question1 extends Component {
       <div>
         <h3>Question 1</h3>
         <h2>How are you feeling today?</h2> 
-        <p>(On a scale of 1 - 5)</p>
+        <p>(On a scale of 1 - 5)</p><br />
         <input type="number" placeholder="1 = bad, 5 = great" id="Q1" onChange={this.handleChange1} />
-        <button onClick={this.handleClick1}>Submit</button>
+        <button id="submit" onClick={this.handleClick1}>Submit</button>
       </div>
     );
   }
