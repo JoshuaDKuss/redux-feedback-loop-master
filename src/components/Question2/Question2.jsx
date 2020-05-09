@@ -31,10 +31,10 @@ class Question2 extends Component {
     return (
       <div>
         <h3>Question 2</h3>
-        <h1>How well are you understanding the content?</h1>
+        <h1>How well do you understand the content?</h1>
         <p>(On a scale of 1 - 5)</p><br />
         <input type="number" placeholder="1 = bad, 5 = great" id="Q2" onChange={this.handleChange2} />
-        <button id="submit" onClick={this.handleClick2}>Submit</button>
+        <br /><button id="submit" onClick={this.handleClick2}>Submit</button>
       </div>
     );
   }

@@ -34,7 +34,7 @@ class Question1 extends Component {
         <h1>How are you feeling today?</h1> 
         <p>(On a scale of 1 - 5)</p><br />
         <input type="number" placeholder="1 = bad, 5 = great" id="Q1" onChange={this.handleChange1} />
-        <button id="submit" onClick={this.handleClick1}>Submit</button>
+        <br /><button id="submit" onClick={this.handleClick1}>Submit</button>
       </div>
     );
   }

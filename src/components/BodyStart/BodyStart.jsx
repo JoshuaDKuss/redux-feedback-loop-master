@@ -31,12 +31,12 @@ class Body extends Component {
 //   };//end getPizzas
 
   render() {
-    // console.log(this.state.pizzaList)
+    
     return (
       <div className="BodyStart">
-          {/* <Question1 /> */}
           
-        <button id="start" onClick={this.handleClickStart}>Next</button>
+          
+        <button id="start" onClick={this.handleClickStart}>Click To Start!</button>
 
           {/* <button id="start" onClick={ this.handleClickStart }link to="/Question1">Click To Start!</button> */}
 
