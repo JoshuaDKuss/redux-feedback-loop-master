@@ -13,6 +13,11 @@ class Body extends Component {
     console.log('Body mounted');
   }
 
+  handleClickStart =() => {
+      console.log('done been CLICKED');
+      this.props.history.push('/Question1');
+  }
+
 //   getFeedback = () => {
 //     axios.get('/api/pizza')
 //       .then(response => {
@@ -29,8 +34,9 @@ class Body extends Component {
     // console.log(this.state.pizzaList)
     return (
       <div>
-          <Question1 />
-          <button class="block" id="start">Click To Enter Feedback!</button>
+          {/* <Question1 /> */}
+          <button class="block" id="start" 
+          onClick={ this.handleClickStart }>Click To Enter Feedback!</button>
 
           <route path="/Question1" component={ Question1 } />
           {/* <link to="/Question1"></link> */}
@@ -45,6 +51,8 @@ class Body extends Component {
   };//end render
 };//end return
 
+// onClick={ this.handleClick }
+// {/* <link to="/Question1"></link> */}
 
 
 export default Body;

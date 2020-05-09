@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import BodyStart from '../BodyStart/BodyStart';
 
 //import Footer from '../Footer/Footer';
-//import Body from '../Body/Body';
+import Question1 from '../Question1/Question1';
 //import { connect } from 'react-redux';
 //import AddCust from '../AddCust/AddCust';
 //import { HashRouter, Route, Link } from 'react-router-dom';
@@ -26,9 +26,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">    
+        <Header />
+
         {/* <HashRouter> */}
 
-          <Header />
+          
           <BodyStart />
 
 
@@ -63,9 +65,6 @@ class App extends Component {
 //export default connect(reduxStateToProps)(App);
 
 
-
-// onClick={ this.handleClick }
-// {/* <link to="/Question1"></link> */}
 
 
 export default App;
