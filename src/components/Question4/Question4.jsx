@@ -17,13 +17,9 @@ class Question4 extends Component {
   } // end HC4
 
   handleClick4 = () => {
-    if(this.state.smackTalk === '' || this.state.smackTalk > 5){
-      alert(`Dude, you have the memory of a goldfish. Pick between 1-5!`);
-      return;
-    }
-    else {this.props.dispatch({ type: 'smackTalk', payload: this.state});
+    console.log('done been CLICKED');
+    this.props.dispatch({ type: 'smackTalk', payload: this.state});
     this.props.history.push('/ReviewForm');
-    }
   } // end HC4
   
   render() {
