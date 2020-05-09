@@ -1,41 +1,33 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
+import { connect } from 'react-redux';
 
 
 class ReviewForm extends Component {
-  state = {
-    smackTalk: ''
-  }
-
+  
   componentDidMount = () => {
-    console.log('Q4');
+    console.log('RF');
   } // end CDM
 
-  handleChangeR = (event) => {
-    console.log('smackTalk', event.target.value)
-    this.setState({ smackTalk: event.target.value })
-  } // end HC4
 
   handleClickR = () => {
-    if(this.state.smackTalk === '' || this.state.smackTalk > 5){
-      alert(`Dude, you have the memory of a goldfish. Pick between 1-5!`);
-      return;
-    }
-    else {this.props.dispatch({ type: 'smackTalk', payload: this.state});
-    this.props.history.push('/ReviewForm');
-    }
+    this.props.history.push('/Awesome');
   } // end HC3
   
   render() {
-    console.log(this.state.smackTalk);
+    
     return (
       <div>
           <h1>Thank you for your feedback!</h1>
           <p>Your responses are:</p>
+          {/* <p>Feelings: <span>{this.props.reduxState.feelz}</span></p> */}
+          {/* <p>Understanding: <span>{this.props.reduxState.understandz}</span></p> */}
+          {/* <p>Support: <span>{this.props.reduxState.supportz}</span></p> */}
+          {/* <p>Comments: <span>{this.props.reduxState.smackTalk}</span></p> */}
         
         
         
-        <br /><button id="submit" onClick={this.handleClick4}>Send</button>
+        <br /><button id="submit" onClick={this.handleClickR}>Send</button>
       </div>
     );
   }

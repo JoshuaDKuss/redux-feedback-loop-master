@@ -8,6 +8,7 @@ import Question2 from '../Question2/Question2';
 import Question3 from '../Question3/Question3';
 import Question4 from '../Question4/Question4';
 import ReviewForm from '../ReviewForm/ReviewForm';
+import Awesome from '../Awesome/Awesome';
 import { connect } from 'react-redux';
 import { HashRouter, Route } from 'react-router-dom';  //, Link
 
@@ -37,7 +38,7 @@ class App extends Component {
           <Route path='/Question3' render={(props) => <Question3 {...props} dispatch={this.props.dispatch} />} />
           <Route path='/Question4' render={(props) => <Question4 {...props} dispatch={this.props.dispatch} />} />
           <Route path='/ReviewForm' render={(props) => <ReviewForm {...props} dispatch={this.props.dispatch} />} />
-
+          <Route path='/Awesome' render={(props) => <Awesome {...props} dispatch={this.props.dispatch} />} />
           {/* <ul>
             
             <li><Link to="/order">Order Info</Link></li>

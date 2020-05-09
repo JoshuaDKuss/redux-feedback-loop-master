@@ -35,6 +35,7 @@ class Body extends Component {
     return (
       <div className="BodyStart">
           
+        <h3>Take your time, be as accurate as possible.</h3>
           
         <button id="start" onClick={this.handleClickStart}>Click To Start!</button>
 
