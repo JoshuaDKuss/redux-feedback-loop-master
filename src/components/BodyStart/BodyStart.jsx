@@ -33,11 +33,10 @@ class Body extends Component {
   render() {
     // console.log(this.state.pizzaList)
     return (
-      <div>
+      <div className="BodyStart">
           {/* <Question1 /> */}
           
-          <button class="block" id="start" 
-          onClick={ this.handleClickStart }>Click To Start!</button>
+          <button id="start" onClick={ this.handleClickStart }>Click To Start!</button>
 
           {/* <route path="/Question1" component={ Question1 } /> */}
           {/* <link to="/Question1"></link> */}

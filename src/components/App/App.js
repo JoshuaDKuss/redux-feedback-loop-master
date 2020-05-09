@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
+//import axios from 'axios';
 import Header from '../Header/Header';
 import BodyStart from '../BodyStart/BodyStart';
 //import Footer from '../Footer/Footer';
