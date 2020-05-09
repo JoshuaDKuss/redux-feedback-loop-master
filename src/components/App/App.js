@@ -3,20 +3,18 @@ import './App.css';
 //import axios from 'axios';
 import Header from '../Header/Header';
 import BodyStart from '../BodyStart/BodyStart';
-//import Footer from '../Footer/Footer';
 import Question1 from '../Question1/Question1';
 import Question2 from '../Question2/Question2';
 import Question3 from '../Question3/Question3';
 import Question4 from '../Question4/Question4';
 import { connect } from 'react-redux';
-
 import { HashRouter, Route } from 'react-router-dom';  //, Link
 
 
 class App extends Component {
 
   componentDidMount = () => {
-    console.log('App.js componentDidMount', this.props);
+    //console.log('App.js componentDidMount', this.props);
   }
 
   handleClick = () => {
@@ -30,9 +28,9 @@ class App extends Component {
     return (
       <div className="App">    
         <Header />
-        <BodyStart />
+        {/* <BodyStart /> */}
         <HashRouter>
-
+          <Route exact path='/' render={(props) => <BodyStart {...props} dispatch={this.props.dispatch} />} />
           <Route path='/Question1' render={(props) => <Question1 {...props} dispatch={this.props.dispatch} />} />
           <Route path='/Question2' render={(props) => <Question2 {...props} dispatch={this.props.dispatch} />} />
           <Route path='/Question3' render={(props) => <Question3 {...props} dispatch={this.props.dispatch} />} />

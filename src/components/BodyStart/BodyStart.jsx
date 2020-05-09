@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import axios from 'axios'
-import Question1 from '../Question1/Question1';
+//import Question1 from '../Question1/Question1';
 
 class Body extends Component {
 
@@ -10,7 +10,7 @@ class Body extends Component {
 
   componentDidMount() {
     //this.getFeedback();
-    console.log('Body mounted');
+    console.log('BodyStart mounted');
   }
 
   handleClickStart =() => {
@@ -36,10 +36,12 @@ class Body extends Component {
       <div className="BodyStart">
           {/* <Question1 /> */}
           
-          <button id="start" onClick={ this.handleClickStart }>Click To Start!</button>
+        <button id="start" onClick={this.handleClickStart}>Next</button>
 
-          {/* <route path="/Question1" component={ Question1 } /> */}
-          {/* <link to="/Question1"></link> */}
+          {/* <button id="start" onClick={ this.handleClickStart }link to="/Question1">Click To Start!</button> */}
+
+          {/* <Route path="/Question1" component={ Question1 } /> */}
+          
 
         {/* <h1>Pizzas</h1>
         <PizzaList
