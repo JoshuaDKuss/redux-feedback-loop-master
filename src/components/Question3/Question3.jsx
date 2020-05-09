@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Question3 extends Component {
+  state = {
+    supportz:
+  }
   render() {
     return (
       <div className="App">

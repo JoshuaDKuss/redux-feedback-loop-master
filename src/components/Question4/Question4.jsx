@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Question4 extends Component {
+  state = {
+    smackTalk: ''
+  }
+  
   render() {
     return (
       <div className="App">

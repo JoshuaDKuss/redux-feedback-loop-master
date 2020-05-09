@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 //import './App.css';
 
 class Question2 extends Component {
+  state = {
+    understandz: ''
+  }
+
+
   render() {
     return (
       <div>

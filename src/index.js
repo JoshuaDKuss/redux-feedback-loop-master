@@ -2,28 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
-//import { createStore } from 'redux';
-//import { Provider } from 'react-redux'; 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'; 
 import registerServiceWorker from './registerServiceWorker';
 // import axios from 'axios';
 
-// const reducerInitialState = {
-//     customerToAdd: {
-//         // name: '',
-//         // address: '',
-//         // city: '',
-//         // zip: '',
-//     },
-//     type: []
-// };
+const reducerInitialState = {
+    feedbackToAdd: {
+        feelz: '',
+        understandz: '',
+        supportz: '',
+        smackTalk: '',
+    },
+    type: []
+};
 
-// const myReducer = (state = reducerInitialState, action) => {
-//     console.log('myReducer:', state, action);
-//     if (action.type === 'addPizza') {
-//         console.log('inmyReducerAddPizza', action.payload);
-//         state.type = [...state.type, action.payload]; 
-//         console.log(state.type);
-//         return state;
+let feelz;
+
+const myReducer = (state = reducerInitialState, action) => {
+    console.log('myReducer:', state, action);
+    if (action.type === 'Feelz') {
+    console.log('Feelz be:', action.payload)
+    //console.log(`(index.js)`, state)
+    feelz = action.payload.feelz;
+    console.log(feelz)
+    return { ...state, feeling: action.payload.feelz };
+}
 //     } else if (action.type === 'addCustomer') {
 //         console.log('inmyReducerAddCustomer', action.payload);
 //         state.customerToAdd = action.payload;
@@ -32,11 +36,11 @@ import registerServiceWorker from './registerServiceWorker';
 //             // ...this.state.customerToAdd,
 //             // [action]: action.payload
 //     }
-// };//end myReducer
+};//end myReducer
 
-// const myStore = createStore(myReducer);
+const myStore = createStore(myReducer);
 
 ReactDOM.render(
-<App />, 
-document.getElementById('root'));
-registerServiceWorker();
+    <Provider store={myStore}>
+        <App />
+    </Provider>, document.getElementById('root')); registerServiceWorker();
