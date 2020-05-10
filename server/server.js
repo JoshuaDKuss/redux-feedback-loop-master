@@ -12,7 +12,6 @@ app.use(express.static('build'));
 /** ---------- EXPRESS ROUTES ---------- **/
 
 app.use('/post', feedback);
-//'/api/feedback'
 // feedbackRouter
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

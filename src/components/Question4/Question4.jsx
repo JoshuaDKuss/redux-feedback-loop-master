@@ -5,10 +5,9 @@ import React, { Component } from 'react';
 class Question4 extends Component {
   state = {
     comments: ''
-  }
+  } // end state
 
   componentDidMount = () => {
-    //console.log('Q4');
   } // end CDM
 
   handleChange4 = (event) => {
@@ -31,12 +30,12 @@ class Question4 extends Component {
         <h3>Question 4</h3>
         <h1>Any comments you want to leave?</h1>
         <p>(Be nice!  <span role="img" aria-label="cowboy">🤠</span>)</p><br />
-        <input type="text" placeholder="you're a poet............................................do ya know it?" 
+        <input type="text" placeholder="you're a poet.............do ya know it?" 
         id="Q4" onChange={this.handleChange4} />
         <br /><button id="submit" onClick={this.handleClick4}>Submit</button>
       </div>
     );
-  }
-}
+  } // end render
+} // end component
 
 export default Question4;

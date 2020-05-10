@@ -12,13 +12,11 @@ import Awesome from '../Awesome/Awesome';
 import { connect } from 'react-redux';
 import { HashRouter, Route } from 'react-router-dom';  //, Link
 
-
 class App extends Component {
 
   componentDidMount = () => {
-    //console.log('App.js componentDidMount', this.props);
+    
   }
-
   // handleClick = () => {
   //   console.log('HC app');
   //   //this.props.dispatch({ type: click });
@@ -29,7 +27,6 @@ class App extends Component {
     return (
       <div className="App">    
         <Header />
-        {/* <BodyStart /> */}
         <HashRouter>
           <Route exact path='/' render={(props) => <BodyStart {...props} dispatch={this.props.dispatch} />} />
           <Route path='/Question1' render={(props) => <Question1 {...props} dispatch={this.props.dispatch} />} />
@@ -38,17 +35,6 @@ class App extends Component {
           <Route path='/Question4' render={(props) => <Question4 {...props} dispatch={this.props.dispatch} />} />
           <Route path='/ReviewForm' render={(props) => <ReviewForm {...props} dispatch={this.props.dispatch} />} />
           <Route path='/Awesome' component={Awesome} />
-          {/* <ul>
-            
-            <li><Link to="/order">Order Info</Link></li>
-            <li><Link to="/checkout">Checkout</Link></li>
-          </ul>
-          <Route exact path="/" render={(props) => <Body {...props} dispatch={this.props.dispatch} />} />
-          <Route path="/order" render={(props) => <AddCust {...props} dispatch={this.props.dispatch} />} />
-          <Route path="/checkout" render={(props) => 
-                <Footer {...props} dispatch={this.props.dispatch}
-              state = {this.props.reduxState} />}
-          /> */}
         </HashRouter>
       </div>
     );

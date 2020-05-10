@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 class Question1 extends Component {
   state = {
     feeling: ''
-  }
+  } // end state
 
   componentDidMount = () => {
-    //console.log('Q1');
+   
   } // end CDM
 
   handleChange1 = (event) => {
@@ -41,7 +41,7 @@ class Question1 extends Component {
         <br /><button id="submit" onClick={this.handleClick1}>Submit</button>
       </div>
     );
-  }
-}
+  } // end render
+} // end component
 
 export default Question1;

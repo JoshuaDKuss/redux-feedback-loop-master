@@ -9,11 +9,10 @@ class ReviewForm extends Component {
     //console.log('RF');
   } // end CDM
 
-
   handleClickR = () => {
     this.props.dispatch({ type: 'Submit' });
     this.props.history.push('/Awesome');
-  } // end HC3
+  } // end HC
   
   render() {
     

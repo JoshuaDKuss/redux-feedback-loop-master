@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 class Question3 extends Component {
   state = {
     support: ''
-  }
+  } // end state
 
   componentDidMount = () => {
-    //console.log('Q3');
+
   } // end CDM
 
   handleChange3 = (event) => {
@@ -38,7 +38,7 @@ class Question3 extends Component {
         <br /><button id="submit" onClick={this.handleClick3}>Submit</button>
       </div>
     );
-  }
-}
+  } // end render
+} // end component
 
 export default Question3;

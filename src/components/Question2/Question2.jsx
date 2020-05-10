@@ -7,7 +7,7 @@ class Question2 extends Component {
   }
 
   componentDidMount = () => {
-    //console.log('Q2');
+   
   } // end CDM
 
   handleChange2 = (event) => {
@@ -41,7 +41,7 @@ class Question2 extends Component {
         <br /><button id="submit" onClick={this.handleClick2}>Submit</button>
       </div>
     );
-  }
-}
+  } // end render
+} // end component
 
 export default Question2;

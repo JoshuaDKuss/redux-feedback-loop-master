@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 class Awesome extends Component {
-    //review = { feeling: '', understanding: '', support: '', comments: '' }; 
 
     handleClickA = () => {
         this.props.history.push('/');
