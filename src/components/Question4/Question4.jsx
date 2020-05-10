@@ -12,18 +12,20 @@ class Question4 extends Component {
   } // end CDM
 
   handleChange4 = (event) => {
-    console.log('comments', event.target.value)
+    //console.log('comments', event.target.value)
     this.setState({ comments: event.target.value })
   } // end HC4
 
   handleClick4 = () => {
-    console.log('done been CLICKED');
-    this.props.dispatch({ type: 'comments', payload: this.state});
+    //console.log('done been CLICKED');
+    this.props.dispatch({ 
+      type: 'comments', payload: this.state
+    });
     this.props.history.push('/ReviewForm');
   } // end HC4
   
   render() {
-    console.log(this.state.comments);
+    //console.log(this.state.comments);
     return (
       <div>
         <h3>Question 4</h3>

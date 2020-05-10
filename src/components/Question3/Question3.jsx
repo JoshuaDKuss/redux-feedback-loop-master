@@ -11,7 +11,7 @@ class Question3 extends Component {
   } // end CDM
 
   handleChange3 = (event) => {
-    console.log('support', event.target.value)
+    //console.log('support', event.target.value)
     this.setState({ support: event.target.value })
   } // end HC3
 
@@ -28,7 +28,7 @@ class Question3 extends Component {
   } // end HC3
 
   render() {
-    console.log(this.state.support);
+    //console.log(this.state.support);
     return (
       <div>
         <h3>Question 3</h3>

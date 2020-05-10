@@ -11,7 +11,7 @@ class Question2 extends Component {
   } // end CDM
 
   handleChange2 = (event) => {
-    console.log('understanding', event.target.value)
+    //console.log('understanding', event.target.value)
     this.setState({ 
       understanding: event.target.value 
     })
@@ -31,7 +31,7 @@ class Question2 extends Component {
 
 
   render() {
-    console.log(this.state.understanding);
+    //console.log(this.state.understanding);
     return (
       <div>
         <h3>Question 2</h3>
