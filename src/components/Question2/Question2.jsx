@@ -7,12 +7,14 @@ class Question2 extends Component {
   }
 
   componentDidMount = () => {
-    console.log('Q2');
+    //console.log('Q2');
   } // end CDM
 
   handleChange2 = (event) => {
     console.log('understanding', event.target.value)
-    this.setState({ understanding: event.target.value })
+    this.setState({ 
+      understanding: event.target.value 
+    })
   } // end HC2
 
   handleClick2 = () => {
@@ -20,7 +22,9 @@ class Question2 extends Component {
       alert(`Dude, pick a number between 1-5, it's not rocket science`);
       return;
     }
-    else {this.props.dispatch({ type: 'understanding', payload: this.state});
+    else {this.props.dispatch({ 
+      type: 'understanding', payload: this.state
+    });
     this.props.history.push('/Question3');
     }
   } // end HC2

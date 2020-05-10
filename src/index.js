@@ -7,30 +7,30 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios';
 
-const reducerInitialState = {
-    feedback: {
-        feeling: '',
-        understanding: '',
-        support: '',
-        comments: '',
-    },
-    type: []
-};
+// const reducerInitialState = {
+//     feedback: {
+//         feeling: '',
+//         understanding: '',
+//         support: '',
+//         comments: '',
+//     },
+//     type: []
+// };
 
-//  state = { feeling: '', understanding: '', support: '', comments: '', ReviewForm: '' }
+//  state = { feeling: '', understanding: '', support: '', comments: '', ReviewForm: '' }   {reducerInitialState}
 
 let feeling; let understanding; let support; let comments; 
 let review = { feeling: feeling, understanding: understanding, support: support, comments: comments};
 
 // reducer function
-const myReducer = (state = {reducerInitialState}, action) => {  //ReviewForm
-    console.log('myReducer:', state, action);
+const myReducer = (state = { feeling: '', understanding: '', support: '', comments: '' }, action) => {  //ReviewForm
+    //console.log('myReducer:', state, action);
     if (action.type === 'feeling') {
     console.log('feeling', action.payload)
     console.log(`(index.js)`, state)
     feeling = action.payload.feeling;
     console.log(feeling)
-    return { feeling: feeling };  //...state, feeling: action.payload.feeling
+    return { ...state, feeling: feeling };  //...state, feeling: action.payload.feeling
 }
 if (action.type === 'understanding') {
     console.log('understanding', action.payload)

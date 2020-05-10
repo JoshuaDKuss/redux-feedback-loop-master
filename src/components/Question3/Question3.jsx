@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
 
-
 class Question3 extends Component {
   state = {
     support: ''
@@ -21,7 +20,9 @@ class Question3 extends Component {
       alert(`Dude, you have the memory of a goldfish. Pick between 1-5!`);
       return;
     }
-    else {this.props.dispatch({ type: 'support', payload: this.state});
+    else {this.props.dispatch({ 
+      type: 'support', payload: this.state
+    });
     this.props.history.push('/Question4');
     }
   } // end HC3

@@ -7,11 +7,11 @@ class BodyStart extends Component {
 
   componentDidMount() {
     //this.getFeedback();
-    console.log('BodyStart mounted');
+    //console.log('BodyStart mounted');
   }
 
   handleClickStart =() => {
-      console.log('done been CLICKED');
+      //console.log('done been CLICKED');
       this.props.history.push('/Question1');
   }
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
 
-
 class Question1 extends Component {
   state = {
     feeling: ''
@@ -24,7 +23,7 @@ class Question1 extends Component {
       return;
     }
     else {this.props.dispatch({ 
-      type: 'Feeling', payload: this.state
+      type: 'feeling', payload: this.state
     });
     this.props.history.push('/Question2');
     }
