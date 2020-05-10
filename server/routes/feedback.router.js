@@ -16,7 +16,7 @@ const pool = require('../modules/pool');
 router.post('/', (req, res) => {
     let queryText = "INSERT INTO feedback (feelz, understandz, supportz, smackTalk) VALUES ($1, $2, $3, $4)";
     pool.query(queryText, [req.body.feelz, req.body.understandz, req.body.supportz, req.body.smackTalk])
-        .then((result) => {
+        .then((response) => {
             res.sendStatus(201);
         }).catch((error) => {
             console.log(error);

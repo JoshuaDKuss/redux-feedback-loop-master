@@ -19,11 +19,10 @@ class App extends Component {
     //console.log('App.js componentDidMount', this.props);
   }
 
-  handleClick = () => {
-    console.log('HC app');
-    //this.props.dispatch({ type: click });
-    //this.props.history.push( '/Question1' );
-  } // end HC
+  // handleClick = () => {
+  //   console.log('HC app');
+  //   //this.props.dispatch({ type: click });
+  // } // end HC
 
   render() {
 
@@ -38,7 +37,7 @@ class App extends Component {
           <Route path='/Question3' render={(props) => <Question3 {...props} dispatch={this.props.dispatch} />} />
           <Route path='/Question4' render={(props) => <Question4 {...props} dispatch={this.props.dispatch} />} />
           <Route path='/ReviewForm' render={(props) => <ReviewForm {...props} dispatch={this.props.dispatch} />} />
-          <Route path='/Awesome' render={(props) => <Awesome {...props} dispatch={this.props.dispatch} />} />
+          <Route path='/Awesome' component={Awesome} />
           {/* <ul>
             
             <li><Link to="/order">Order Info</Link></li>
@@ -56,6 +55,6 @@ class App extends Component {
   }
 }
 
-const reduxStateToProps = (reduxState) => ({ reduxState });
+const stateOnProps = (reduxState) => ({ reduxState });
 
-export default connect(reduxStateToProps)(App);
+export default connect(stateOnProps)(App);

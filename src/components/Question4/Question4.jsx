@@ -8,7 +8,7 @@ class Question4 extends Component {
   }
 
   componentDidMount = () => {
-    console.log('Q4');
+    //console.log('Q4');
   } // end CDM
 
   handleChange4 = (event) => {

@@ -11,6 +11,7 @@ class ReviewForm extends Component {
 
 
   handleClickR = () => {
+    this.props.dispatch({ type: 'Submit' });
     this.props.history.push('/Awesome');
   } // end HC3
   
@@ -25,14 +26,13 @@ class ReviewForm extends Component {
           <p>Support: <span>{this.props.reduxState.supportz}</span></p>
           <p>Comments: <span>{this.props.reduxState.smackTalk}</span></p>
         
-        
-        
-        <br /><button id="submit" onClick={this.handleClickR}>Send</button>
+        <br /><button id="submit" onClick={this.handleClickR}>Submit</button>
       </div>
     );
   }
 }
-
-const putReduxStateOnProps = (reduxState) => ({ reduxState });
-export default connect(putReduxStateOnProps)(ReviewForm);
 //export default ReviewForm;
+
+const stateOnProps = (reduxState) => ({ reduxState });
+
+export default connect(stateOnProps)(ReviewForm);
