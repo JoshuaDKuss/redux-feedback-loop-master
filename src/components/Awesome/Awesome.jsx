@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 class Awesome extends Component {
-    //state = { feeling: '', understanding: '', support: '', comments: '' }; 
+    //review = { feeling: '', understanding: '', support: '', comments: '' }; 
 
     handleClickA = () => {
         this.props.history.push('/');
@@ -20,5 +20,6 @@ class Awesome extends Component {
             </>
         )
     }
+    review = { feeling: '', understanding: '', support: '', comments: '' };
 }
 export default Awesome;

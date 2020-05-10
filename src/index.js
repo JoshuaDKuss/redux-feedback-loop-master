@@ -20,7 +20,11 @@ import axios from 'axios';
 //  state = { feeling: '', understanding: '', support: '', comments: '', ReviewForm: '' }   {reducerInitialState}
 
 let feeling; let understanding; let support; let comments; 
-let review = { feeling: feeling, understanding: understanding, support: support, comments: comments};
+let review = { 
+    feeling: feeling, 
+    understanding: understanding, 
+    support: support, 
+    comments: comments};
 
 // reducer function
 const myReducer = (state = { feeling: '', understanding: '', support: '', comments: '' }, action) => {  //ReviewForm
@@ -30,7 +34,7 @@ const myReducer = (state = { feeling: '', understanding: '', support: '', commen
     console.log(`(index.js)`, state)
     feeling = action.payload.feeling;
     console.log(feeling)
-    return { ...state, feeling: feeling };  //...state, feeling: action.payload.feeling
+    return { ...state, feeling: feeling };  // feeling: action.payload.feeling
 }
 if (action.type === 'understanding') {
     console.log('understanding', action.payload)
@@ -40,18 +44,22 @@ if (action.type === 'understanding') {
 }
 if (action.type === 'support') {
     console.log('support', action.payload)
-    console.log(`(index.js)`, state)
+    //console.log(`(index.js)`, state)
     support = action.payload.support;
-    return { ...state, support: support }; // action.payload.
+    return { ...state, support: support }; 
 }
 if (action.type === 'comments') {
     console.log('comments', action.payload)
     console.log(`(index.js)`, state)
     comments = action.payload.comments;
-    return { ...state, comments: comments };  // action.payload.
+    return { ...state, comments: comments };  
 }
 if (action.type === 'Submit' ){
-    review = { feeling: feeling, understanding: understanding, support:support, comments: comments};
+    review = { 
+        feeling: feeling, 
+        understanding: understanding, 
+        support:support, 
+        comments: comments};
     console.log('axios post', review);
     axios.post('/post', review)
     .then(result => {
