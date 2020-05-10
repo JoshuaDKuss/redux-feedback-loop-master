@@ -14,8 +14,8 @@ const pool = require('../modules/pool');
 // // pizza
 
 router.post('/', (req, res) => {
-    let queryText = "INSERT INTO feedback (feelz, understandz, supportz, smackTalk) VALUES ($1, $2, $3, $4)";
-    pool.query(queryText, [req.body.feelz, req.body.understandz, req.body.supportz, req.body.smackTalk])
+    let queryText = "INSERT INTO feedback (feeling, understanding, support, comments) VALUES ($1, $2, $3, $4)";
+    pool.query(queryText, [req.body.feeling, req.body.understanding, req.body.support, req.body.comments])
         .then((response) => {
             res.sendStatus(201);
         }).catch((error) => {

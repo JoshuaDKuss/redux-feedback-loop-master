@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 class Question4 extends Component {
   state = {
-    smackTalk: ''
+    comments: ''
   }
 
   componentDidMount = () => {
@@ -12,18 +12,18 @@ class Question4 extends Component {
   } // end CDM
 
   handleChange4 = (event) => {
-    console.log('smackTalk', event.target.value)
-    this.setState({ smackTalk: event.target.value })
+    console.log('comments', event.target.value)
+    this.setState({ comments: event.target.value })
   } // end HC4
 
   handleClick4 = () => {
     console.log('done been CLICKED');
-    this.props.dispatch({ type: 'smackTalk', payload: this.state});
+    this.props.dispatch({ type: 'comments', payload: this.state});
     this.props.history.push('/ReviewForm');
   } // end HC4
   
   render() {
-    console.log(this.state.smackTalk);
+    console.log(this.state.comments);
     return (
       <div>
         <h3>Question 4</h3>

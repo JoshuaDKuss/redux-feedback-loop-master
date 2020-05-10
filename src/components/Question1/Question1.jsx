@@ -4,30 +4,34 @@ import React, { Component } from 'react';
 
 class Question1 extends Component {
   state = {
-    feelz: ''
+    feeling: ''
   }
 
   componentDidMount = () => {
-    console.log('Q1');
+    //console.log('Q1');
   } // end CDM
 
   handleChange1 = (event) => {
-    console.log('feelz', event.target.value)
-    this.setState({ feelz: event.target.value })
+    console.log('feeling', event.target.value)
+    this.setState({ 
+      feeling: event.target.value 
+    })
   } // end HC1
 
   handleClick1 = () => {
-    if(this.state.feelz === '' || this.state.feelz > 5){
+    if(this.state.feeling === '' || this.state.feeling > 5){
       alert(`Dude, a number between 1-5, it's not that hard`);
       return;
     }
-    else {this.props.dispatch({ type: 'feelz', payload: this.state});
+    else {this.props.dispatch({ 
+      type: 'Feeling', payload: this.state
+    });
     this.props.history.push('/Question2');
     }
   } // end HC1
 
   render() {
-    console.log(this.state.feelz);
+    console.log(this.state.feeling);
     return (
       <div>
         <h3>Question 1</h3>

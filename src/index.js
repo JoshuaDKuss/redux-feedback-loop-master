@@ -7,52 +7,53 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios';
 
-// const reducerInitialState = {
-//     feedbackToAdd: {
-//         // feelz: '',
-//         // understandz: '',
-//         // supportz: '',
-//         // smackTalk: '',
-//     },
-//     type: []
-// };
+const reducerInitialState = {
+    feedback: {
+        feeling: '',
+        understanding: '',
+        support: '',
+        comments: '',
+    },
+    type: []
+};
 
-//  { feelz: '', understandz: '', supportz: '', smackTalk: '', ReviewForm: '' }
-let feelz; let understandz; let supportz; let smackTalk; 
-let ReviewForm = { feelz: feelz, understandz: understandz, supportz: supportz, smackTalk: smackTalk};
+//  state = { feeling: '', understanding: '', support: '', comments: '', ReviewForm: '' }
+
+let feeling; let understanding; let support; let comments; 
+let review = { feeling: feeling, understanding: understanding, support: support, comments: comments};
 
 // reducer function
-const myReducer = (state = { feelz: '', understandz: '', supportz: '', smackTalk: '' }, action) => {  //ReviewForm
+const myReducer = (state = {reducerInitialState}, action) => {  //ReviewForm
     console.log('myReducer:', state, action);
-    if (action.type === 'Feelz') {
-    console.log('Feelz', action.payload)
+    if (action.type === 'feeling') {
+    console.log('feeling', action.payload)
     console.log(`(index.js)`, state)
-    feelz = action.payload.feelz;
-    console.log(feelz)
-    return { feelz: feelz };  //...state, feeling: action.payload.feelz
+    feeling = action.payload.feeling;
+    console.log(feeling)
+    return { feeling: feeling };  //...state, feeling: action.payload.feeling
 }
-if (action.type === 'Understandz') {
-    console.log('Understandz', action.payload)
+if (action.type === 'understanding') {
+    console.log('understanding', action.payload)
     console.log(`(index.js)`, state)
-    understandz = action.payload.understandz;
-    return { ...state, understandz: understandz };  //action.payload.
+    understanding = action.payload.understanding;
+    return { ...state, understanding: understanding };  //action.payload.
 }
-if (action.type === 'Supportz') {
-    console.log('Supportz', action.payload)
+if (action.type === 'support') {
+    console.log('support', action.payload)
     console.log(`(index.js)`, state)
-    supportz = action.payload.supportz;
-    return { ...state, supportz: supportz }; // action.payload.
+    support = action.payload.support;
+    return { ...state, support: support }; // action.payload.
 }
-if (action.type === 'smackTalk') {
-    console.log('smackTalk', action.payload)
+if (action.type === 'comments') {
+    console.log('comments', action.payload)
     console.log(`(index.js)`, state)
-    smackTalk = action.payload.smackTalk;
-    return { ...state, smackTalk: smackTalk };  // action.payload.
+    comments = action.payload.comments;
+    return { ...state, comments: comments };  // action.payload.
 }
-if (action.type === 'submit' ){
-    let ReviewForm = { feelz: feelz, understandz: understandz, supportz:supportz, smackTalk: smackTalk};
-    console.log('axios post', ReviewForm);
-    axios.post('/post', ReviewForm)
+if (action.type === 'Submit' ){
+    review = { feeling: feeling, understanding: understanding, support:support, comments: comments};
+    console.log('axios post', review);
+    axios.post('/post', review)
     .then(result => {
         console.log(`axios post works`);
     }).catch(error => {

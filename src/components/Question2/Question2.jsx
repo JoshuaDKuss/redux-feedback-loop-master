@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class Question2 extends Component {
   state = {
-    understandz: ''
+    understanding: ''
   }
 
   componentDidMount = () => {
@@ -11,23 +11,23 @@ class Question2 extends Component {
   } // end CDM
 
   handleChange2 = (event) => {
-    console.log('understandz', event.target.value)
-    this.setState({ understandz: event.target.value })
+    console.log('understanding', event.target.value)
+    this.setState({ understanding: event.target.value })
   } // end HC2
 
   handleClick2 = () => {
-    if(this.state.understandz === '' || this.state.understandz > 5){
+    if(this.state.understanding === '' || this.state.understanding > 5){
       alert(`Dude, pick a number between 1-5, it's not rocket science`);
       return;
     }
-    else {this.props.dispatch({ type: 'understandz', payload: this.state});
+    else {this.props.dispatch({ type: 'understanding', payload: this.state});
     this.props.history.push('/Question3');
     }
   } // end HC2
 
 
   render() {
-    console.log(this.state.understandz);
+    console.log(this.state.understanding);
     return (
       <div>
         <h3>Question 2</h3>

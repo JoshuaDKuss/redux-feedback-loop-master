@@ -4,30 +4,30 @@ import React, { Component } from 'react';
 
 class Question3 extends Component {
   state = {
-    supportz: ''
+    support: ''
   }
 
   componentDidMount = () => {
-    console.log('Q3');
+    //console.log('Q3');
   } // end CDM
 
   handleChange3 = (event) => {
-    console.log('supportz', event.target.value)
-    this.setState({ supportz: event.target.value })
+    console.log('support', event.target.value)
+    this.setState({ support: event.target.value })
   } // end HC3
 
   handleClick3 = () => {
-    if(this.state.supportz === '' || this.state.supportz > 5){
+    if(this.state.support === '' || this.state.support > 5){
       alert(`Dude, you have the memory of a goldfish. Pick between 1-5!`);
       return;
     }
-    else {this.props.dispatch({ type: 'supportz', payload: this.state});
+    else {this.props.dispatch({ type: 'support', payload: this.state});
     this.props.history.push('/Question4');
     }
   } // end HC3
 
   render() {
-    console.log(this.state.supportz);
+    console.log(this.state.support);
     return (
       <div>
         <h3>Question 3</h3>

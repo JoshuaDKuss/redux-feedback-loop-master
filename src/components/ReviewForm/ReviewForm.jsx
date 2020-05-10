@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class ReviewForm extends Component {
   
   componentDidMount = () => {
-    console.log('RF');
+    //console.log('RF');
   } // end CDM
 
 
@@ -21,10 +21,10 @@ class ReviewForm extends Component {
       <div>
           <h1>Thank you for your feedback!</h1>
           <p>Your responses are:</p>
-          <p>Feelings: <span>{this.props.reduxState.feelz}</span></p>
-          <p>Understanding: <span>{this.props.reduxState.understandz}</span></p>
-          <p>Support: <span>{this.props.reduxState.supportz}</span></p>
-          <p>Comments: <span>{this.props.reduxState.smackTalk}</span></p>
+          <p>Feelings: <span>{this.props.reduxState.feeling}</span></p>
+          <p>Understanding: <span>{this.props.reduxState.understanding}</span></p>
+          <p>Support: <span>{this.props.reduxState.support}</span></p>
+          <p>Comments: <span>{this.props.reduxState.comments}</span></p>
         
         <br /><button id="submit" onClick={this.handleClickR}>Submit</button>
       </div>
